@@ -10,7 +10,7 @@ $db = new Swoole\MySQL;
 $server = array(
     'host' => '127.0.0.1',
     'user' => 'root',
-    'password' => '',
+    'password' => 'Abc123456789!',
     'database' => 'test',
 );
 
