@@ -17,10 +17,10 @@ $serv->set(array(
 
 ));
 
-$serv->on('Connect',  function($serv, $fd){
+$serv->on('connect',  function($serv, $fd){
     echo "Client Connect.\n";
 });
-$serv->on('Receive',  function($serv, $fd, $form_id, $data){
+$serv->on('receive',  function($serv, $fd, $form_id, $data){
 
     //db do something
     $db = new Swoole\MySQL;
@@ -40,7 +40,7 @@ $serv->on('Receive',  function($serv, $fd, $form_id, $data){
     //send to server succeed message
     $serv->send($fd, "Server:save success!".$data);
 });
-$serv->on('Close',  function($serv, $fd){
+$serv->on('close',  function($serv, $fd){
     echo "Client Close, 88~ \n";
 });
 
