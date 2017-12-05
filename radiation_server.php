@@ -31,7 +31,7 @@ $serv->on('receive',  function($serv, $fd, $form_id, $data){
         'database' => 'test',
     );
     $db->connect($server, function ($db, $result) {
-        $db->query("INSERT INTO test (`data`) VALUES(EMPTY_BLOB());", function (Swoole\MySQL $db, $result) {
+        $db->query("INSERT INTO test (`data`) VALUES('2131231zasdsd');", function (Swoole\MySQL $db, $result) {
             var_dump($result);
             $db->close();
         });
